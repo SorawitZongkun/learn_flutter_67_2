@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // Step 4: sperate the Home widget into its own file
 // import 'screen/home.dart';
 import 'package:learn_flutter_67_2/screen/home.dart';
+import 'package:learn_flutter_67_2/screen/item.dart';
 
 void main() {
   runApp(
@@ -14,7 +15,10 @@ void main() {
           backgroundColor: Colors.pinkAccent,
           centerTitle: true,
         ),
-        body: Home(),
+        // body: Home(),
+
+        // Step 8: stateful widget
+        body: Item(),
       ),
     ),
   );
