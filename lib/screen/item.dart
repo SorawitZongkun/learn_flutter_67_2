@@ -6,6 +6,9 @@ import 'package:flutter/material.dart';
 // Step 10: make a model for store data
 import 'package:learn_flutter_67_2/models/person.dart';
 
+// Step 12: use google fonts
+import 'package:google_fonts/google_fonts.dart';
+
 class Item extends StatefulWidget {
   const Item({super.key});
 
@@ -84,22 +87,40 @@ class _ItemState extends State<Item> {
                 children: [
                   Text(
                     personList[index].name,
-                    style: TextStyle(
+                    // style: TextStyle(
+                    //   fontSize: 24,
+                    //   color: Colors.white,
+                    //   fontWeight: FontWeight.bold,
+                    // ),
+
+                    // Step 12: use google fonts
+                    style: GoogleFonts.kanit(
                       fontSize: 24,
-                      color: Colors.white,
+                      color: Color(0xFFFFFFFF),
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Text(
                     "Age: ${personList[index].age}",
-                    style: TextStyle(fontSize: 18, color: Colors.white70),
+                    // style: TextStyle(fontSize: 18, color: Colors.white70),
+                    // Step 12: use google fonts
+                    style: GoogleFonts.kanit(
+                      fontSize: 18,
+                      color: Color(0xFFFFFFFF70),
+                    ),
                   ),
                   Text(
                     // "Job: ${personList[index].job}",
                     // Step 11: use a enum
                     "Job: ${personList[index].job.title}", // Use the title from the enum
-                    style: TextStyle(fontSize: 18, color: Colors.white70),
+                    // style: TextStyle(fontSize: 18, color: Colors.white70),
+                    // Step 12: use google fonts
+                    style: GoogleFonts.kanit(
+                      fontSize: 18,
+                      color: Color.fromARGB(221, 173, 86, 86),
+                    ),
                   ),
+                  // Step 11: use a enum
                   Image.asset(
                     personList[index].job.image,
                     width: 50,
