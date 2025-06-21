@@ -60,7 +60,9 @@ class _ItemState extends State<Item> {
         return Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
-            color: Colors.orangeAccent,
+            // color: Colors.orangeAccent,
+            // Step 11: use a enum
+            color: personList[index].job.color, // Use the color from the enum
           ),
           margin: EdgeInsets.symmetric(vertical: 2, horizontal: 5),
           padding: EdgeInsets.all(40),
@@ -93,8 +95,15 @@ class _ItemState extends State<Item> {
                     style: TextStyle(fontSize: 18, color: Colors.white70),
                   ),
                   Text(
-                    "Job: ${personList[index].job}",
+                    // "Job: ${personList[index].job}",
+                    // Step 11: use a enum
+                    "Job: ${personList[index].job.title}", // Use the title from the enum
                     style: TextStyle(fontSize: 18, color: Colors.white70),
+                  ),
+                  Image.asset(
+                    personList[index].job.image,
+                    width: 50,
+                    height: 50,
                   ),
                 ],
               ),
