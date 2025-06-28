@@ -4,6 +4,9 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter_67_2/models/person.dart';
 
+// Step 17: Routing
+import 'package:learn_flutter_67_2/main.dart';
+
 class AddForm extends StatefulWidget {
   const AddForm({super.key});
 
@@ -94,6 +97,12 @@ class _AddFormState extends State<AddForm> {
                     print(personList.length);
                     _formKey.currentState!
                         .reset(); // Reset the form after submission
+
+                    // Step 17: Routing
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (ctx) => MyApp()),
+                    );
                   },
                   style: FilledButton.styleFrom(backgroundColor: Colors.green),
                   child: Text(

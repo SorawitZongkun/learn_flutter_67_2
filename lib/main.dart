@@ -29,5 +29,28 @@ void main() {
 
   // Step 13: TextFormField for input
   // Step 14: DropdownButton for job selection
-  runApp(const AddForm());
+  // runApp(const AddForm());
+
+  // Step 17: Routing
+  runApp(const MyApp());
+}
+
+// Step 17: Routing
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "My App",
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("My App"),
+          backgroundColor: Colors.pinkAccent,
+          centerTitle: true,
+        ),
+        body: const Item(),
+      ),
+    );
+  }
 }
